@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC2B3B2B19B49842002D1BCE /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC2B3B2A19B49842002D1BCE /* Lobster 1.4.otf */; };
+		AC748AB019B337FF00456492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC748AAF19B337FF00456492 /* AppDelegate.swift */; };
+		AC748AB219B337FF00456492 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC748AB119B337FF00456492 /* GameScene.sks */; };
+		AC748AB419B337FF00456492 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC748AB319B337FF00456492 /* GameScene.swift */; };
+		AC748AB619B337FF00456492 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC748AB519B337FF00456492 /* GameViewController.swift */; };
+		AC748AB919B337FF00456492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC748AB719B337FF00456492 /* Main.storyboard */; };
+		AC748ABB19B3380000456492 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC748ABA19B337FF00456492 /* Images.xcassets */; };
+		AC748AC719B3380000456492 /* SwiftCoptersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC748AC619B3380000456492 /* SwiftCoptersTests.swift */; };
+		AC88226D19B4928600034076 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88226C19B4928600034076 /* GameOverScene.swift */; };
+		AC88226F19B494DC00034076 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC88226E19B494DC00034076 /* GameOverScene.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC748AC119B3380000456492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC748AA219B337FF00456492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC748AA919B337FF00456492;
+			remoteInfo = SwiftCopters;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC2B3B2A19B49842002D1BCE /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		AC748AAA19B337FF00456492 /* SwiftCopters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCopters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC748AAE19B337FF00456492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC748AAF19B337FF00456492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC748AB119B337FF00456492 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AC748AB319B337FF00456492 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AC748AB519B337FF00456492 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AC748AB819B337FF00456492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC748ABA19B337FF00456492 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC748AC019B3380000456492 /* SwiftCoptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCoptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC748AC519B3380000456492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC748AC619B3380000456492 /* SwiftCoptersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoptersTests.swift; sourceTree = "<group>"; };
+		AC88226C19B4928600034076 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		AC88226E19B494DC00034076 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC748AA719B337FF00456492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC748ABD19B3380000456492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC748AA119B337FF00456492 = {
+			isa = PBXGroup;
+			children = (
+				AC748AAC19B337FF00456492 /* SwiftCopters */,
+				AC748AC319B3380000456492 /* SwiftCoptersTests */,
+				AC748AAB19B337FF00456492 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC748AAB19B337FF00456492 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC748AAA19B337FF00456492 /* SwiftCopters.app */,
+				AC748AC019B3380000456492 /* SwiftCoptersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC748AAC19B337FF00456492 /* SwiftCopters */ = {
+			isa = PBXGroup;
+			children = (
+				AC2B3B2A19B49842002D1BCE /* Lobster 1.4.otf */,
+				AC748AAF19B337FF00456492 /* AppDelegate.swift */,
+				AC748AB119B337FF00456492 /* GameScene.sks */,
+				AC88226E19B494DC00034076 /* GameOverScene.sks */,
+				AC748AB319B337FF00456492 /* GameScene.swift */,
+				AC88226C19B4928600034076 /* GameOverScene.swift */,
+				AC748AB519B337FF00456492 /* GameViewController.swift */,
+				AC748AB719B337FF00456492 /* Main.storyboard */,
+				AC748ABA19B337FF00456492 /* Images.xcassets */,
+				AC748AAD19B337FF00456492 /* Supporting Files */,
+			);
+			path = SwiftCopters;
+			sourceTree = "<group>";
+		};
+		AC748AAD19B337FF00456492 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC748AAE19B337FF00456492 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC748AC319B3380000456492 /* SwiftCoptersTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC748AC619B3380000456492 /* SwiftCoptersTests.swift */,
+				AC748AC419B3380000456492 /* Supporting Files */,
+			);
+			path = SwiftCoptersTests;
+			sourceTree = "<group>";
+		};
+		AC748AC419B3380000456492 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC748AC519B3380000456492 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC748AA919B337FF00456492 /* SwiftCopters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC748ACA19B3380000456492 /* Build configuration list for PBXNativeTarget "SwiftCopters" */;
+			buildPhases = (
+				AC748AA619B337FF00456492 /* Sources */,
+				AC748AA719B337FF00456492 /* Frameworks */,
+				AC748AA819B337FF00456492 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCopters;
+			productName = SwiftCopters;
+			productReference = AC748AAA19B337FF00456492 /* SwiftCopters.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC748ABF19B3380000456492 /* SwiftCoptersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC748ACD19B3380000456492 /* Build configuration list for PBXNativeTarget "SwiftCoptersTests" */;
+			buildPhases = (
+				AC748ABC19B3380000456492 /* Sources */,
+				AC748ABD19B3380000456492 /* Frameworks */,
+				AC748ABE19B3380000456492 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC748AC219B3380000456492 /* PBXTargetDependency */,
+			);
+			name = SwiftCoptersTests;
+			productName = SwiftCoptersTests;
+			productReference = AC748AC019B3380000456492 /* SwiftCoptersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC748AA219B337FF00456492 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "MARIO EGUILUZ ALEBICTO";
+				TargetAttributes = {
+					AC748AA919B337FF00456492 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					AC748ABF19B3380000456492 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AC748AA919B337FF00456492;
+					};
+				};
+			};
+			buildConfigurationList = AC748AA519B337FF00456492 /* Build configuration list for PBXProject "SwiftCopters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC748AA119B337FF00456492;
+			productRefGroup = AC748AAB19B337FF00456492 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC748AA919B337FF00456492 /* SwiftCopters */,
+				AC748ABF19B3380000456492 /* SwiftCoptersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC748AA819B337FF00456492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC748ABB19B3380000456492 /* Images.xcassets in Resources */,
+				AC748AB219B337FF00456492 /* GameScene.sks in Resources */,
+				AC88226F19B494DC00034076 /* GameOverScene.sks in Resources */,
+				AC2B3B2B19B49842002D1BCE /* Lobster 1.4.otf in Resources */,
+				AC748AB919B337FF00456492 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC748ABE19B3380000456492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC748AA619B337FF00456492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC748AB419B337FF00456492 /* GameScene.swift in Sources */,
+				AC748AB619B337FF00456492 /* GameViewController.swift in Sources */,
+				AC88226D19B4928600034076 /* GameOverScene.swift in Sources */,
+				AC748AB019B337FF00456492 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC748ABC19B3380000456492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC748AC719B3380000456492 /* SwiftCoptersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC748AC219B3380000456492 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC748AA919B337FF00456492 /* SwiftCopters */;
+			targetProxy = AC748AC119B3380000456492 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC748AB719B337FF00456492 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC748AB819B337FF00456492 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC748AC819B3380000456492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC748AC919B3380000456492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC748ACB19B3380000456492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwiftCopters/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC748ACC19B3380000456492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwiftCopters/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC748ACE19B3380000456492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftCoptersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCopters.app/SwiftCopters";
+			};
+			name = Debug;
+		};
+		AC748ACF19B3380000456492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftCoptersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCopters.app/SwiftCopters";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC748AA519B337FF00456492 /* Build configuration list for PBXProject "SwiftCopters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC748AC819B3380000456492 /* Debug */,
+				AC748AC919B3380000456492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC748ACA19B3380000456492 /* Build configuration list for PBXNativeTarget "SwiftCopters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC748ACB19B3380000456492 /* Debug */,
+				AC748ACC19B3380000456492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC748ACD19B3380000456492 /* Build configuration list for PBXNativeTarget "SwiftCoptersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC748ACE19B3380000456492 /* Debug */,
+				AC748ACF19B3380000456492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC748AA219B337FF00456492 /* Project object */;
+}
