@@ -6,14 +6,6 @@
 //  Copyright (c) 2014 MARIO EGUILUZ ALEBICTO. All rights reserved.
 //
 
-//
-//  GameScene.swift
-//  SwiftCopters
-//
-//  Created by MARIO EGUILUZ ALEBICTO on 31/08/14.
-//  Copyright (c) 2014 MARIO EGUILUZ ALEBICTO. All rights reserved.
-//
-
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -63,8 +55,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = CGVectorMake(gravityX, 0.0)
         
         let borderBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        borderBody.categoryBitMask = categoryScreen
         nodeWorld.physicsBody = borderBody
-        nodeWorld.physicsBody.categoryBitMask = categoryScreen
     }
     
     func startWorld() {
@@ -103,13 +95,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         nodeCopter.addChild(spriteCopter)
         nodeWorld.addChild(nodeCopter)
         
-        nodeCopter.physicsBody = SKPhysicsBody(circleOfRadius: 0.9*spriteCopter.frame.size.width/2)
-        nodeCopter.physicsBody.linearDamping = linearDamping
-        nodeCopter.physicsBody.angularDamping = angularDamping
-        nodeCopter.physicsBody.allowsRotation = true
-        nodeCopter.physicsBody.affectedByGravity = false
-        nodeCopter.physicsBody.categoryBitMask = categoryCopter;
-        nodeCopter.physicsBody.contactTestBitMask = categoryScreen | categoryEnemy;
+        let nodeBody = SKPhysicsBody(circleOfRadius: 0.9*spriteCopter.frame.size.width/2)
+        nodeBody.linearDamping = linearDamping
+        nodeBody.angularDamping = angularDamping
+        nodeBody.allowsRotation = true
+        nodeBody.affectedByGravity = false
+        nodeBody.categoryBitMask = categoryCopter;
+        nodeBody.contactTestBitMask = categoryScreen | categoryEnemy;
+        nodeCopter.physicsBody = nodeBody;
+        
     }
     
     //Create clouds
@@ -158,12 +152,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             spriteBarLeft.position = CGPointMake(randomX,0)
             spriteBarLeft.zPosition = 5;
             let borderBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(0, 0, spriteBarLeft.size.width, spriteBarLeft.size.height))
-            spriteBarLeft.physicsBody = borderBody;
-            spriteBarLeft.physicsBody.dynamic = false;
-            spriteBarLeft.physicsBody.categoryBitMask = categoryEnemy;
-            spriteBarLeft.physicsBody.affectedByGravity = false;
+            borderBody.dynamic = false;
+            borderBody.categoryBitMask = categoryEnemy;
+            borderBody.affectedByGravity = false;
             spriteBarLeft.name = "enemyBarLeft";
             spriteBarLeft.anchorPoint = CGPointMake(0, 0)
+            spriteBarLeft.physicsBody = borderBody;
             nodeEnemy.addChild(spriteBarLeft)
             
             let spriteBarRight = SKSpriteNode(imageNamed:"enemyBarRight")
@@ -171,12 +165,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             spriteBarRight.position = CGPointMake(spriteBarLeft.position.x + spriteBarLeft.size.width + ditanceBetweenBars,0)
             spriteBarRight.zPosition = 5;
             let borderBodyRight:SKPhysicsBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(0, 0, spriteBarRight.size.width, spriteBarRight.size.height))
-            spriteBarRight.physicsBody = borderBodyRight
-            spriteBarRight.physicsBody.dynamic = false;
-            spriteBarRight.physicsBody.categoryBitMask = categoryEnemy
-            spriteBarRight.physicsBody.affectedByGravity = false;
+            borderBodyRight.dynamic = false;
+            borderBodyRight.categoryBitMask = categoryEnemy
+            borderBodyRight.affectedByGravity = false;
             spriteBarRight.name = "enemyBarRight";
             spriteBarRight.anchorPoint = CGPointMake(0, 0)
+            spriteBarRight.physicsBody = borderBodyRight
             
             //4
             //HAMMERS
@@ -195,18 +189,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             spriteSwingRight.zRotation = -3.14/8
             
             let borderBodySwings = SKPhysicsBody(edgeLoopFromRect: CGRectMake(-spriteSwingLeft.size.width/2, -spriteSwingLeft.size.height, spriteSwingLeft.size.width*0.9, 0.4*spriteSwingLeft.size.height))
-            spriteSwingLeft.physicsBody = borderBodySwings
-            spriteSwingLeft.physicsBody.dynamic = false
-            spriteSwingLeft.physicsBody.categoryBitMask = categoryEnemy
-            spriteSwingLeft.physicsBody.affectedByGravity = false
+            borderBodySwings.dynamic = false
+            borderBodySwings.categoryBitMask = categoryEnemy
+            borderBodySwings.affectedByGravity = false
             spriteSwingLeft.name = "enemySwing"
+            spriteSwingLeft.physicsBody = borderBodySwings
             
             let borderBodySwingsRight = SKPhysicsBody(edgeLoopFromRect: CGRectMake(-spriteSwingRight.size.width/2, -spriteSwingRight.size.height, spriteSwingRight.size.width*0.9, 0.4*spriteSwingRight.size.height))
-            spriteSwingRight.physicsBody = borderBodySwingsRight
-            spriteSwingRight.physicsBody.dynamic = false
-            spriteSwingRight.physicsBody.categoryBitMask = categoryEnemy
-            spriteSwingRight.physicsBody.affectedByGravity = false
+            borderBodySwingsRight.dynamic = false
+            borderBodySwingsRight.categoryBitMask = categoryEnemy
+            borderBodySwingsRight.affectedByGravity = false
             spriteSwingRight.name = "enemySwing"
+            spriteSwingRight.physicsBody = borderBodySwingsRight
             
             //5
             let actionSwing:SKAction = SKAction.sequence([SKAction.rotateByAngle(3.14/4, duration: 1),SKAction.rotateByAngle(-3.14/4, duration: 1)])
@@ -255,8 +249,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //To mantain the copter in the centered at the bottom of the screen
     func centerOnNode(node:SKNode) {
-        let cameraPositionInScene = node.scene.convertPoint(node.position, fromNode: node.parent)
-        node.parent.position = CGPointMake(node.parent.position.x, node.parent.position.y - cameraPositionInScene.y-self.frame.size.height/3);
+        let cameraPositionInScene = node.scene?.convertPoint(node.position, fromNode: node.parent!)
+        
+        node.parent?.position = CGPointMake(node.parent!.position.x, node.parent!.position.y - cameraPositionInScene!.y-self.frame.size.height/3);
     }
     
     
@@ -267,9 +262,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         if !start {
-            nodeCopter.physicsBody.affectedByGravity = true
+            nodeCopter.physicsBody?.affectedByGravity = true
             spriteCopter.runAction(SKAction.repeatActionForever(SKAction.animateWithTextures([SKTexture(imageNamed:"booCopter1"),SKTexture(imageNamed:"booCopter2"),SKTexture(imageNamed:"booCopter3"),SKTexture(imageNamed:"booCopter4")], timePerFrame: 0.075)))
-            nodeCopter.physicsBody.dynamic = true
+            nodeCopter.physicsBody?.dynamic = true
         }
         start = true;
         
@@ -277,21 +272,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if gravityX > 0 {
                 gravityX = -4
                 self.physicsWorld.gravity = CGVectorMake(gravityX, 0.0)
-                self.nodeCopter.physicsBody.applyImpulse(CGVectorMake(impulseX, impulseY))
+                self.nodeCopter.physicsBody?.applyImpulse(CGVectorMake(impulseX, impulseY))
                 nodeCopter.runAction(SKAction.rotateToAngle(+3.14/10, duration: 0.3))//rigth
             }
             else {
                 gravityX = 4
                 self.physicsWorld.gravity = CGVectorMake(gravityX, 0.0)
-                self.nodeCopter.physicsBody.applyImpulse(CGVectorMake(-impulseX, impulseY))
+                self.nodeCopter.physicsBody?.applyImpulse(CGVectorMake(-impulseX, impulseY))
                 nodeCopter.runAction(SKAction.rotateToAngle(-3.14/10, duration: 0.3))//left
             }
         }
         
         //We have to change the height of the physics bode to make it larger when the copter goes up
         let borderBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(-self.frame.size.width/2, -self.frame.size.height/2, self.frame.size.width, self.frame.size.height+nodeCopter.position.y))
-        nodeWorld.physicsBody = borderBody
-        nodeWorld.physicsBody.categoryBitMask = categoryScreen
+        nodeWorld.physicsBody? = borderBody
+        nodeWorld.physicsBody?.categoryBitMask = categoryScreen
     }
     
     func didBeginContact(contact: SKPhysicsContact!) {
@@ -313,32 +308,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         viewController?.presentGameOverScene()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
