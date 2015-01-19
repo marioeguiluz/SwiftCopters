@@ -12,8 +12,8 @@ import SpriteKit
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            var sceneData = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: nil)
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)
+            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData!)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
             
@@ -90,9 +90,9 @@ class GameViewController: UIViewController {
 
     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
+            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
         } else {
-            return Int(UIInterfaceOrientationMask.All.toRaw())
+            return Int(UIInterfaceOrientationMask.All.rawValue)
         }
     }
 
